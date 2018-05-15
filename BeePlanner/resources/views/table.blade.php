@@ -12,9 +12,9 @@
                     <table class="table table-hover table-bordered table-striped datatable" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Week:  </th>
+                                <th>Week: 13 - 26 t/m 30 maart 2018  </th>
                                 <th>Opdrachtnummer</th>
-                                <th>Projectnaam</th>
+                                <th>Opmerking</th>
 								<th>Totaal uren</th>
 								<th>Resterende uren</th>
 								<th>maandag</th>
