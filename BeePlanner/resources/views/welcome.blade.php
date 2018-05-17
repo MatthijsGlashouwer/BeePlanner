@@ -5,18 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>BeePlanner</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Arial', sans-serif;
-                
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
@@ -66,24 +65,29 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            
                 <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                    
+
+                    
                 </div>
-            @endif
+            
 
             <div class="content">
                 <div class="title m-b-md">
                     BeePlanner
-                    <br>
-                    <a href="https://crm.beedata.nl/custom/themes/default/images/company_logo.png?v=kD9PcQfcKHWGycpiL4Qyrg"> <img src="https://crm.beedata.nl/custom/themes/default/images/company_logo.png?v=kD9PcQfcKHWGycpiL4Qyrg" alt="test"> </a>
-                
+					<br>
+					<a href="https://crm.beedata.nl/custom/themes/default/images/company_logo.png?v=kD9PcQfcKHWGycpiL4Qyrg"> <img src="https://crm.beedata.nl/custom/themes/default/images/company_logo.png?v=kD9PcQfcKHWGycpiL4Qyrg" alt="test"> </a>
+
                 </div>
+									@if (Route::has('login'))
+					@auth	 
+					 <a href="{{ url('/hours') }}">Uren invullen</a>
+					@else
+						<button type="button" class="btn btn-primary"><a href="{{ route('login') }}">Login</a></button>
+						
+					@endauth
+					@endif
 
 
             </div>
